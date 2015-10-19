@@ -98,8 +98,8 @@ sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
 			int minNumber = counterPrimeMin;
 
 			// New array
-			int[] mechanicalArray = new int[2];
-   		int[] mechanicalArray = {maxNumber, minNumber};
+			//int[] mechanicalArray = new int[2];
+   		int[] mechanicalArray = {A[minNumber], A[maxNumber]};
 
 			return mechanicalArray;
 
@@ -113,9 +113,12 @@ sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
 		 * 3. Write it (almost) from scratch (see below) in such a way that
 		 * 		the calls made in the main method will work properly
 		 ********************************************************************/
-		public static void (int A[]){
-			
+		public static void displayArray(int A[]){
+			int arrayPrintCounter;
 
+			for (arrayPrintCounter = 0; arrayPrintCounter < A.length; arrayPrintCounter++) {
+					sop(A[arrayPrintCounter]);
+			}
 
 		} //... and here goes the rest of your code ...
 
@@ -125,10 +128,11 @@ sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
 		/************* This is where you write the name ************************************/
 		/************* of the code you want to execute  ************************************/
 		public static void main(String[] args) {
-			 int[] A = {1, -3, 4, -19, 35};
-			 minmax(A);
-			// displayArray(A);
-			// displayArray(minmax(A));
+			int[] A = {1, -3, 4, -19, 35};
+			sop("=== DISPLAY ARRAY ===");
+			displayArray(A);
+			sop("=== MIN || MAX ===");
+			displayArray(minmax(A));
 
 			// mystery2();
 			// sop(mystery(A) + " is Max index in the array");
