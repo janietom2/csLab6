@@ -73,7 +73,36 @@ sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
 		 * 		- the maximum value in A (as the second element of the returned array)
 		 ********************************************************************/
 		public static int[] minmax(int[] A) {
-			// your code goes here
+			//Max
+			int indexSelectorMax = 0;
+			int counterPrimeMax = 1;
+			int indexCounterMax;
+
+			for (indexCounterMax = 0; indexCounterMax < A.length; indexCounterMax++ ) {
+					if (A[indexCounterMax] > A[counterPrimeMax]){
+						counterPrimeMax = indexCounterMax;
+						indexSelectorMax = counterPrimeMax;
+					}
+			}
+			int maxNumber = indexSelectorMax;
+
+			// Min
+			int indexCounterMin;
+			int counterPrimeMin = 1;
+
+			for (indexCounterMin = 0; indexCounterMin < A.length; indexCounterMin++ ) {
+					if (A[indexCounterMin] < A[counterPrimeMin]) {
+						counterPrimeMin = indexCounterMin;
+					}
+			}
+			int minNumber = counterPrimeMin;
+
+			// New array
+			int[] mechanicalArray = new int[2];
+   		int[] mechanicalArray = {maxNumber, minNumber};
+
+			return mechanicalArray;
+
 		}
 
 		/********************************************************************
@@ -84,7 +113,11 @@ sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
 		 * 3. Write it (almost) from scratch (see below) in such a way that
 		 * 		the calls made in the main method will work properly
 		 ********************************************************************/
-		// public static //... and here goes the rest of your code ...
+		public static void (int A[]){
+			
+
+
+		} //... and here goes the rest of your code ...
 
 
 		/***********************************************************************************/
@@ -92,7 +125,8 @@ sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
 		/************* This is where you write the name ************************************/
 		/************* of the code you want to execute  ************************************/
 		public static void main(String[] args) {
-			// int[] A = {1, -3, 4, -19, 35};
+			 int[] A = {1, -3, 4, -19, 35};
+			 minmax(A);
 			// displayArray(A);
 			// displayArray(minmax(A));
 
