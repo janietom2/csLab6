@@ -34,32 +34,34 @@ public static int mystery(int[] numbersArray){
  ********************************************************************/
 public static void mystery2() {
 
-	Scanner x = new Scanner(System.in);
+	Scanner scan = new Scanner(System.in);
 
-	int y;
-	System.out.println("Enter y");
-	y = x.nextInt();
+	int arraySize;
+	System.out.println("Enter Array Size");
+	arraySize = scan.nextInt();
 
-	String[] z = new String[y];
-	int[] a = new int[y];
+	String[] stringArray = new String[arraySize];
+	int[] integerArray = new int[arraySize];
 
-	for (int i = 0; i < y; i++) {
+	for (int counter = 0; counter < arraySize; counter++) {
 		System.out.println("Enter string:");
-		z[i] = x.next();
+		stringArray[counter] = scan.next();
 		System.out.println("Enter number:");
-		a[i] = x.nextInt();
+		integerArray[counter] = scan.nextInt();
 	}
 
-	int b = 0;
-	int c = a[0];
-	for (int i=1; i<y; i++) {
-		if (a[i] < c) {
-				c = a[i];
-				b = i;
-			}
-		}
+	int counterPrime = 1;
 
-System.out.println(c + " ; " + z[b] + ".");}
+	for (int indexCounter = 0; indexCounter < arraySize; indexCounter++ ){
+		if (integerArray[indexCounter] < integerArray[counterPrime]) {
+			counterPrime = indexCounter;
+		}
+	}
+
+sop("=====");
+sop(integerArray[counterPrime]+ " ==> " + stringArray[counterPrime]);
+
+}
 
 
 		/********************************************************************
@@ -70,9 +72,9 @@ System.out.println(c + " ; " + z[b] + ".");}
 		 * 		- the minimum value in A (as the first element of the returned array)
 		 * 		- the maximum value in A (as the second element of the returned array)
 		 ********************************************************************/
-		// public static int[] minmax(int[] A) {
-		// 	// your code goes here
-		// }
+		public static int[] minmax(int[] A) {
+			// your code goes here
+		}
 
 		/********************************************************************
 		 * ACTIVITY 2.2
@@ -90,12 +92,11 @@ System.out.println(c + " ; " + z[b] + ".");}
 		/************* This is where you write the name ************************************/
 		/************* of the code you want to execute  ************************************/
 		public static void main(String[] args) {
-			int[] A = {1, -3, 4, -19, 35};
+			// int[] A = {1, -3, 4, -19, 35};
 			// displayArray(A);
 			// displayArray(minmax(A));
 
-			mystery2();
-
+			// mystery2();
 			// sop(mystery(A) + " is Max index in the array");
 
 		}
