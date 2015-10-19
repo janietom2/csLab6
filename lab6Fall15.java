@@ -8,15 +8,19 @@ public class lab6Fall15 {
 	 * 2. Provide feedback about the coding style
 	 * 3. Rewrite it in an appropriate manner
 	 ********************************************************************/
-public static int mystery(int[] a)
+public static int mystery(int[] numbersArray)
 	{
-		int w = 0;
 
-		for (int i = 0; i < a.length; i++) { 
-			if (a[i] >= z){
-				z = a[i];
+		int indexSelector = 0;
+		int indexCounter = 0;
+		int counterPrime = 1;
+
+		for (indexCounter = 0; indexCounter < numbersArray.length; indexCounter++) {
+			if (numbersArray[indexCounter] <= numbersArray[counterPrime]){
+				counterPrime = a[i];
 				w = i;
 			}
+
 		}
 
 			return w;
